@@ -7,15 +7,21 @@ using UnityEngine.SceneManagement;
 public class MainScript : MonoBehaviour
 {
 
-    int Click;
-    Text ClickText;
+    public int Click;
+    public Text ClickText;
 
-    int TotalClick;
-    GameObject ShopPanel;
+    public int TotalClick;
+    public GameObject ShopPanel;
+
+    private void Start()
+    {
+        ClickText.text = Click + "";
+    }
 
 
     private void Update()
     {
+
         ClickText.text = Click + "";
 
         PlayerPrefs.GetInt("Click");
